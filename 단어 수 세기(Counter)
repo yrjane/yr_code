@@ -1,0 +1,11 @@
+import collections
+p = ['leo', 'kiki', 'eden']
+c = ['eden', 'kiki']
+
+def solution(participant, completion):
+    answer = collections.Counter(participant) - collections.Counter(completion)
+
+    return list(answer.keys())[0]
+
+a = solution(p, c)
+print(a)
